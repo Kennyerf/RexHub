@@ -1,1 +1,41 @@
-print("Hello World")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local BackGround = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local GuiLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BackGround.Name = "BackGround"
+BackGround.Parent = ScreenGui
+BackGround.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BackGround.BorderSizePixel = 0
+BackGround.Position = UDim2.new(0.307790548, 0, 0.270377725, 0)
+BackGround.Size = UDim2.new(0, 300, 0, 230)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(188, 188, 188)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(209, 209, 209)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Rotation = 90
+UIGradient.Parent = BackGround
+
+UICorner.Parent = BackGround
+
+GuiLabel.Name = "GuiLabel"
+GuiLabel.Parent = ScreenGui
+GuiLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GuiLabel.BackgroundTransparency = 1.000
+GuiLabel.Position = UDim2.new(0.307790548, 0, 0.270377725, 0)
+GuiLabel.Size = UDim2.new(0, 300, 0, 50)
+GuiLabel.Font = Enum.Font.PatrickHand
+GuiLabel.Text = "DexHub"
+GuiLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+GuiLabel.TextSize = 25.000
+GuiLabel.Active = true
+GuiLabel.Draggable = true
